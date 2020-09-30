@@ -15,3 +15,4 @@ echo $greeting . ',' . $name;
 
 //In PHP echo is used kind of like return or print, this is whats used to display the data on the page.
 
+//In PHP if there is only PHP code on the file a closing tag ? followed by > is not needed, however on a file with code other than PHP that closing tag is required

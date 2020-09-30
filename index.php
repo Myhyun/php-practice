@@ -21,12 +21,15 @@
         <h1>
             <?php
                 $name = $_GET['name'];
+                //The code here gets the name value within the array and assigns it to the name variable
+                //The user can see its function by going to their localhost:8888/?name=Matt (port dependant on server setup)
                     echo "Hello, $name"; 
             ?>
         </h1>
         <h1>
-            <?php
-                echo "Hello, " . $_GET['name'];
+            <?=
+                "Hello, " . $_GET['name'];
+                //Another way to display the same code above but using concatenation and if you notice I use "<?=" instead of "<? echo" the use of <?= is a shortcut 
             ?>
         </h1>
     </Header>

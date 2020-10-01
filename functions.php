@@ -33,6 +33,7 @@
                 "Hello, I am from {$location} and I am {$age} years old"
             //This code here if the user goes to localhost8888/functions.php will only display "Hello," and "Hello, I am from San Diego and I am 22 years old"
             //But if the users instead goes to localhost8888/functions.php/?Name=Matt it would display "Hello, Matt" and "Hello, I am from San Diego and I am 22 years old"
+            //
             ?>
         </h1>
     </header>

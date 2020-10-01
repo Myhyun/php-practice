@@ -37,11 +37,17 @@
         //we are calling it $name (we can call it anything ex. $foobar, the more appropriate the clearer it is) 
         ?>
 
-        <?php foreach ($person as $feature) : ?>
+        <?php foreach ($person as $key => $feature) : ?>
             <li>
+                <strong>
+                    <?= $key; ?>
+                </strong>
                 <?= $feature; ?>
             </li>
         <?php endforeach; ?>
+        <!-- The code above shows how we are able to display both key/value pairs from an array
+            we are also able to separately attach html elements to them 
+        -->
     </ul>
 </body>
 

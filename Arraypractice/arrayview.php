@@ -49,6 +49,68 @@
             we are also able to separately attach html elements to them 
         -->
     </ul>
+
+    <?php
+    echo '<pre>';
+    var_dump($person);
+    echo '</pre>';
+    ?>
+    <!-- the function var_dump is a way to print the array of objects, as using echo only allows you to print a string  
+            with this, we are also able to use HTML to restyle and format the code example shown here using <pre> tags
+    -->
+
+    <ul>
+        <?php foreach ($task as $key => $details) : ?>
+            <li>
+                <strong>
+                    <?= 
+                    ucwords($key); 
+                    //This function ucwords(); stands for use capital words, will turn the first letter in every word into a capital even if the word is a string every first letter 
+                    //will be turned into a capital letter
+                    ?>:
+                </strong>
+                <?= $details; ?>
+            </li>
+        <?php endforeach; ?>
+    </ul>
+
+    <ul>
+            <li>
+                <strong>
+                    Name:
+                </strong>
+                <?= $task['title']; ?>
+            </li>
+            <li>
+                <strong>
+                    Due Date:
+                </strong>
+                <?= $task['due']; ?>
+            </li>
+            <li>
+                <strong>
+                    Assigned To:
+                </strong>
+                <?= $task['assigned_to']; ?>
+            </li>
+            <li>
+                <strong>
+                    Status:
+                </strong>
+                <?= 
+                $task['completed'] ? 'Complete' : 'Incomplete'; 
+                //This here demonstrates the ternary syntax. If the boolean is true "Complete" will be displayed but if the boolean is false "Incomplete" will be displayed
+                ?>
+            </li>
+
+    </ul>
+
+
+    <?php
+    die(var_dump($person));
+    ?>
+    <!-- This die function, stops anything from running after its input is displayed/ran -->
+
 </body>
 
 </html>

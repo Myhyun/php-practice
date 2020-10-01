@@ -36,6 +36,12 @@
         //foreach is a PHP construct, for each $name (just something that can be iterated over like an array), 
         //we are calling it $name (we can call it anything ex. $foobar, the more appropriate the clearer it is) 
         ?>
+
+        <?php foreach ($person as $feature) : ?>
+            <li>
+                <?= $feature; ?>
+            </li>
+        <?php endforeach; ?>
     </ul>
 </body>
 

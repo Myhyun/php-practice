@@ -15,7 +15,7 @@
         'title' => 'Finish Homework',
         'due' => 'today',
         'assigned_to' => 'Matthew',
-        'completed' => false
+        'completed' => true
     ];
 
     $person['name'] = 'Matt';

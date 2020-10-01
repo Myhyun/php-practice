@@ -63,8 +63,8 @@
         <?php foreach ($task as $key => $details) : ?>
             <li>
                 <strong>
-                    <?= 
-                    ucwords($key); 
+                    <?=
+                        ucwords($key);
                     //This function ucwords(); stands for use capital words, will turn the first letter in every word into a capital even if the word is a string every first letter 
                     //will be turned into a capital letter
                     ?>:
@@ -75,36 +75,51 @@
     </ul>
 
     <ul>
-            <li>
-                <strong>
-                    Name:
-                </strong>
-                <?= $task['title']; ?>
-            </li>
-            <li>
-                <strong>
-                    Due Date:
-                </strong>
-                <?= $task['due']; ?>
-            </li>
-            <li>
-                <strong>
-                    Assigned To:
-                </strong>
-                <?= $task['assigned_to']; ?>
-            </li>
-            <li>
-                <strong>
-                    Status:
-                </strong>
-                <?= 
-                $task['completed'] ? 'Complete' : 'Incomplete'; 
-                //This here demonstrates the ternary syntax. If the boolean is true "Complete" will be displayed but if the boolean is false "Incomplete" will be displayed
-                ?>
-            </li>
-
+        <li>
+            <strong>
+                Name:
+            </strong>
+            <?= $task['title']; ?>
+        </li>
+        <li>
+            <strong>
+                Due Date:
+            </strong>
+            <?= $task['due']; ?>
+        </li>
+        <li>
+            <strong>
+                Assigned To:
+            </strong>
+            <?= $task['assigned_to']; ?>
+        </li>
+        <li>
+            <strong>
+                Status:
+            </strong>
+            <?php
+            if ($task['completed']) {
+                echo '&#9989;';
+            } else {
+                echo 'Incomplete';
+            }
+            ?>
+            <?=
+                $task['completed'] ? 'Complete' : 'Incomplete';
+            //This here demonstrates the ternary syntax. If the boolean is true "Complete" will be displayed but if the boolean is false "Incomplete" will be displayed
+            ?>
+        </li>
     </ul>
 
+    <ul>
+        <?php if ($task['completed']) : ?>
+            <span class="icon">&#9989;</span>
+        <?php else : ?>
+            <span class="icon">Incomplete</span>
+        <?php endif; ?>
+    </ul>
+
+    <!-- The code shown above is another shortcut way for a conditional statement that allows the use of HTML as well -->
 
     <?php
     die(var_dump($person));

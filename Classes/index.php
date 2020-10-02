@@ -8,6 +8,7 @@ class Task {
     public $completed = false;
     //protected means that the property is shut out from the outside world, ie outside of this class
     public function __construct($description)
+    //the __construct() function allows for a class to declare what its dependencies are/what collaborators it requires to do its job
     {
         $this->description = $description;
         //setting a property description to THIS object using the arrow

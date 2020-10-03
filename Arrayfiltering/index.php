@@ -22,12 +22,15 @@ $posts = [
 
 ];
 
-// $unpublishedPosts = array_filter($posts, function ($posts) {
+$unpublishedPosts = array_filter($posts, function ($posts) {
 
-//     return ! $posts->published;
-//     //array filter allows you to filter down an array of anything
-// });
+    return ! $posts->published;
+    //array filter allows you to filter down an array of anything
+});
 
 $modified = array_map(function ($post) {
     return 'foobar';
 }, $posts);
+
+    //array map is useful when you need to modify what gets returned
+
